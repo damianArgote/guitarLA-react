@@ -1,6 +1,6 @@
 
 
-const Producto = ({producto}) => {
+const Producto = ({producto,getProducto}) => {
 
 const {name,image,price,description,id} = producto
 
@@ -19,7 +19,7 @@ const {name,image,price,description,id} = producto
                 {description}
               </p>
               <p className="fw-black text-primary fs-3">${price}</p>
-              <button type="button" className="btn btn-dark w-100">
+              <button type="button" className="btn btn-dark w-100" onClick={() => getProducto(producto)}>
                 Agregar al Carrito
               </button>
             </div>
